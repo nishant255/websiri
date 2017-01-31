@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Siri</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href={% static 'siri/css/styles.css'%}>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <p>Web Siri App</p>
+        <form action="/" method="post">
+          {%csrf_token%}
+          Email: <input type="text" name="email" value="">
+          Password: <input type="password" name="password" value=""><br>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      <a href='/'><div id='button'>
+        <p>Speak</p>
+      </div></a>
+    </div>
+  </body>
+</html>
