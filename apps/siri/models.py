@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+from . import stt_google
+
 # Create your models here.
 class User(models.Model):
     first_name = models.CharField(max_length=100)
